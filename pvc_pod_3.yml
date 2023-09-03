@@ -11,7 +11,7 @@ spec:
 
   containers:
   - name: "myc1"
-    image: "vimal13/apache-webserver-php"
+    image: "sumitgupta190/myweb"
     volumeMounts:
       - mountPath: /var/www/data
         name: s1
