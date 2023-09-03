@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mypvtosumit
+spec:
+  capacity:
+    storage: 1G
+
+  accessModes:
+    - ReadWriteOnce
+
+  hostPath:
+    path: /mnt/mysumit

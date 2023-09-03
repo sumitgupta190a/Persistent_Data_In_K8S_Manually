@@ -1,0 +1,27 @@
+kubectl get sc (sc stand for storage class)
+
+kubectl get sc -o yaml
+
+kubectl get sc -o yaml > mysc.yml (Insert sc data in mysc.yml file)
+
+kubectl delete sc --all (deleting sc file because we create permanent data mannually)
+
+notepad mypvc.yml (pvc stand for PersistentVolumeClaim)
+
+kubectl create -f mypvc.yml
+
+notepad mypv.yml
+
+kubectl create -f mypv.yml (pv stand for persistent volume)
+
+notepad pvc_pod.yml
+
+kubectl create -f pvc_pod.yml (Isme hum pod bana rahe hai aur pod ka data permanent ya persistent rahega)
+
+kubectl get pvc (To check the pvc)
+
+kubectl get pv (To check the pv)
+
+kubectl exec -it mypvcpod -- sh (Isse hum pod ke terminal me aa jayege jo humne pvc_pod.yml file me bnayi thi)
+
+cd /var/www/data (Inside the pod or shell, Iss file ke andar jo bhi data rahega bo permanent rahega)

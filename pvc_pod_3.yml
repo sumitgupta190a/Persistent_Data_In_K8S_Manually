@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypvcpod
+spec:
+  volumes: s1
+  - name: s1
+    persistentVoluneClaim:
+      claimName: mysumitpvc
+
+
+  containers:
+  - name: "myc1"
+    image: "vimal13/apache-webserver-php"
+    volumeMounts:
+      - mountPath: /var/www/data
+        name: s1
